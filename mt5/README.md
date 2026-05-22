@@ -1,3 +1,24 @@
+## Installazione (consigliata)
+
+1. Copia **solo** `Experts/Adaptive ICT - FVG.mq5` in `MQL5/Experts/`
+2. MetaEditor: compila `Adaptive ICT - FVG.mq5` (F7) — **un solo file**, nessun .mqh esterno
+3. Trascina l'EA sul grafico (XAUUSD, EURUSD, BTCUSD, ...)
+4. Abilita **Algo Trading**
+
+**Non incollare questo README dentro il file .mq5** — il codice deve finire con `//+------------------------------------------------------------------+`
+
+### Errore compilazione
+
+| Errore | Soluzione |
+|--------|-----------|
+| `ICT_FVG_Utils.mqh not found` | Usa `Adaptive ICT - FVG.mq5` oppure copia anche `Include/ICT_FVG_Utils.mqh` |
+| `# invalid preprocessor` / backtick | Hai incollato il README nel .mq5: cancella tutto dalla riga ~460 in poi |
+| `invalid suffix` / caratteri strani | Scarica di nuovo il file pulito dal repo |
+
+### Versione a 2 file (opzionale)
+
+- `ICT_FVG_Adaptive.mq5` + `Include/ICT_FVG_Utils.mqh` (entrambi richiesti)
+
 # ICT FVG Adaptive — Expert Advisor MT5
 
 EA basato su **ICT**: sweep di liquidità → **FVG** → retest **OTE** (50–62%) in **Kill Zone**.
