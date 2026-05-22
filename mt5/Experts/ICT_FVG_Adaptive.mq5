@@ -398,7 +398,7 @@ bool PlaceOrder(const SetupSignal &s)
       if(ask<=s.entry)
          ok=g_trade.Buy(lots,_Symbol,0,s.sl,s.tp2,InpTradeComment);
       else
-         ok=g_trade.BuyLimit(lots,s.entry,_Symbol,s.sl,s.tp2,ORDER_TIME_SPECIFIED,exp,0,InpTradeComment);
+         ok=g_trade.BuyLimit(lots,s.entry,_Symbol,s.sl,s.tp2,ORDER_TIME_SPECIFIED,exp,InpTradeComment);
      }
    else
      {
@@ -406,7 +406,7 @@ bool PlaceOrder(const SetupSignal &s)
       if(bid>=s.entry)
          ok=g_trade.Sell(lots,_Symbol,0,s.sl,s.tp2,InpTradeComment);
       else
-         ok=g_trade.SellLimit(lots,s.entry,_Symbol,s.sl,s.tp2,ORDER_TIME_SPECIFIED,exp,0,InpTradeComment);
+         ok=g_trade.SellLimit(lots,s.entry,_Symbol,s.sl,s.tp2,ORDER_TIME_SPECIFIED,exp,InpTradeComment);
      }
    if(!ok)
       Print("Ordine fallito: ", g_trade.ResultRetcodeDescription());
